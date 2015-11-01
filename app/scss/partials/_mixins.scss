@@ -1,0 +1,97 @@
+// mixins
+
+// Button generator
+@mixin button-variant-o($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color;
+    border-color: darken($border, 18%);
+    background-color: rgba(lighten($border, 30%), .24);
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      color: lighten($color, 12%);
+      border-color: lighten($border, 12%);
+    }
+  }
+
+  .badge {
+    color: $background;
+    background-color: $color;
+  }
+}
+
+
+// label generator
+@mixin label-variant-o($color) {
+  background-color: transparent;
+  color: $color;
+  border: $border-width solid $color;
+
+  &[href] {
+    &:hover,
+    &:focus {
+      background-color: rgba(darken($color, 36%), .24);
+    }
+  }
+}
+
+// Spacing box model
+@mixin box-model-spacing-creator($property, $name, $value) {
+  .#{$name} { #{$property}: $value;}
+}
+
+@mixin box-model-spacing-creator {
+  @each $box-model-item in $box-model-array {
+    .#{nth($box-model-item, 2)} { #{nth($box-model-item, 1)}: nth($box-model-item, 3);}
+  }
+}
+
+@mixin table-view-height($width, $height) {
+  width: $width;
+  height: $height;
+  min-height: $height;
+}
+
+// keyframes mixin
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+// text align generator
+@mixin text-align-generator($size, $align) {
+  .text-#{$size}-#{$align} {
+    text-align: $align;
+  }
+}

@@ -1,0 +1,40 @@
+.navbar-default {
+	border: none;
+}
+.navbar-btn {
+    &.btn-lg {
+    	margin-top: 23px;
+    	margin-bottom: 23px;
+    }
+}
+
+.navbar-brand {
+  padding: $base-spacing-lg $navbar-padding-horizontal;
+}
+
+@media (min-width: $grid-float-breakpoint) {
+	.navbar-right {
+		li {
+			&:last-child {
+				a {
+					margin-right: $base-spacing-lg;
+				}
+			}
+		}
+	}
+	.navbar-left {
+		li {
+			&:first-child {
+				a {
+					margin-left: $base-spacing-lg;
+				}
+			}
+		}
+	}
+}
+footer {
+	.navbar-inverse {
+		background: transparent;
+		border: none;
+	}
+}

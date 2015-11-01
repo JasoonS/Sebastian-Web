@@ -1,0 +1,33 @@
+/*
+ Utils
+*/
+
+.browsehappy {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: $zindex-navbar-fixed;
+}
+
+.carousel-nav {
+	div {
+		@include transition(all ease-in-out .2s);
+	}
+}
+.carousel-caption {
+	position: static;
+}
+
+// Box spacing
+@include box-model-spacing-creator();
+
+.bg-cover {
+	background-size: cover;
+	background-position: center center;
+}
+
+.close {
+	position: relative;
+	z-index: 10;
+}

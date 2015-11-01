@@ -1,0 +1,166 @@
+// Custom variables
+
+// $icon-font-path: '../_bower_components/bootstrap-sass/assets/fonts/bootstrap/';
+$fa-font-path: '../fonts';
+
+$base-spacing:          6px;
+$base-spacing-sm:       $base-spacing * 2;   // 6 * 2 = 12
+$base-spacing-md:       $base-spacing * 3;   // 6 * 3 = 18
+$base-spacing-lg:       $base-spacing * 4;   // 6 * 4 = 24
+$base-spacing-xlg:      $base-spacing * 6;   // 6 * 6 = 36
+$base-spacing-xxlg:     $base-spacing * 8;   // 6 * 8 = 48
+$base-spacing-xxxlg:    $base-spacing * 16;  // 6 * 16 = 96
+
+$box-model-array:   margin m-none 0, margin m-xs $base-spacing, margin m-sm $base-spacing-sm, margin m-md $base-spacing-md,
+                    margin-top mt-none 0, margin-top mt-xs $base-spacing, margin-top mt-sm $base-spacing-sm, margin-top mt-md $base-spacing-md, margin-top mt-lg $base-spacing-lg, margin-top mt-xlg $base-spacing-xlg, margin-top mt-xxlg $base-spacing-xxlg, margin-top mt-xxxlg $base-spacing-xxxlg,
+                    margin-bottom mb-none 0, margin-bottom mb-xs $base-spacing, margin-bottom mb-sm $base-spacing-sm, margin-bottom mb-md $base-spacing-md, margin-bottom mb-lg $base-spacing-lg, margin-bottom mb-xxlg $base-spacing-xxlg,
+                    margin-right mr-xs $base-spacing, margin-right mr-sm $base-spacing-sm, margin-right mr-lg $base-spacing-lg,
+                    margin-left ml-xs $base-spacing, margin-left ml-sm $base-spacing-sm,
+                    padding p-none 0, padding p-sm $base-spacing-sm, padding p-md $base-spacing-md, padding p-lg $base-spacing-lg, padding p-xlg $base-spacing-xlg,
+                    padding-top pt-none 0, padding-top pt-sm $base-spacing-sm, padding-top pt-lg $base-spacing-lg, padding-top pt-xlg $base-spacing-xlg, padding-top pt-xxlg $base-spacing-xxlg, padding-top pt-xxxlg $base-spacing-xxxlg,
+                    padding-bottom pb-none 0, padding-bottom pb-sm $base-spacing-sm, padding-bottom pb-lg $base-spacing-lg, padding-bottom pb-xlg $base-spacing-xlg, padding-bottom pb-xxlg $base-spacing-xxlg, padding-bottom pb-xxxlg $base-spacing-xxxlg;
+
+$gray-darker:            #333;
+$gray-dark:              #848f98;
+$gray-base:              #aaa;
+$gray:                   #C7CCCF;
+$gray-light:             #eee;
+$gray-lighter:           #f1f2f4;
+$white       :           #FFF;
+$facebook:               #5C75AE;
+$linkedin:               #0077B5;
+$twitter:                #55acee;
+
+$brand-primary:         #3F1875;
+$brand-secondary:       #FFC37E;
+$brand-success:         #5cb85c;
+$brand-info:            #5bc0de;
+$brand-warning:         #f0ad4e;
+$brand-danger:          #d9534f;
+
+$text-muted:            $gray;
+
+$link-hover-color:      darken($brand-primary, 25%);
+
+$border-width:          1px;
+
+$navbar-height:                 96px;
+$navbar-margin-bottom:          0;
+$navbar-default-link-color:     $brand-secondary;
+$navbar-default-link-hover-color:          $brand-primary;
+$nav-link-hover-bg:             rgba($white, .84);
+$nav-link-padding:              10px $base-spacing-lg;
+// $navbar-padding-vertical:       $base-spacing-lg;
+$navbar-inverse-color:          $white;
+$navbar-default-bg:             $white;
+
+$font-family-sans-serif:      "Proxima-Nova", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$line-height-base:            1.8 !default; // 20/14
+// $headings-line-height:        $line-height-base;
+$headings-font-weight:        300;
+$btn-font-weight:             300;
+$alert-link-font-weight:      300;
+$badge-font-weight:           300;
+$close-font-weight:           300;
+
+$border-radius-base:          100px;
+$border-radius-large:         100px;
+$border-radius-small:         100px;
+$input-border-radius-large:   12px;
+$input-border-radius-small:   12px;
+
+$padding-xlarge-vertical:    18px;
+$padding-xlarge-horizontal:  48px;
+
+$padding-large-vertical:    15px;
+$padding-large-horizontal:  36px;
+
+$padding-base-vertical:     9px;
+$padding-base-horizontal:   24px;
+
+$padding-small-vertical:    6px;
+$padding-small-horizontal:  18px;
+
+$padding-xs-vertical:       3px;
+$padding-xs-horizontal:     12px;
+
+
+$state-success-text:        $brand-success;
+$state-info-text:           $brand-info;
+$state-warning-text:        $brand-warning;
+$state-danger-text:         $brand-danger;
+
+// buttons
+$btn-default-color:              $brand-primary;
+$btn-default-bg:                 $white;
+$btn-default-border:             $white;
+
+$btn-primary-color:              $white;
+$btn-primary-bg:                 $brand-primary;
+$btn-primary-border:             $brand-primary;
+
+$btn-success-color:              $white;
+$btn-success-bg:                 $brand-success;
+$btn-success-border:             $brand-success;
+
+$btn-info-color:                 $white;
+$btn-info-bg:                    $brand-info;
+$btn-info-border:                $brand-info;
+
+$btn-warning-color:              $white;
+$btn-warning-bg:                 $brand-warning;
+$btn-warning-border:             $brand-warning;
+
+$btn-danger-color:               $white;
+$btn-danger-bg:                  $brand-danger;
+$btn-danger-border:              $brand-danger;
+
+$btn-link-disabled-color:        $gray-light;
+
+$breadcrumb-active-color:       $gray;
+
+$grid-gutter-width:             24px;
+
+$font-size-large: 14px;
+
+
+$modal-backdrop-opacity:                       .72;
+// $modal-content-border-color:                   $white;
+// $modal-content-fallback-border-color:          $white;
+// $modal-backdrop-bg:                            $white;
+
+
+$well-bg:     $gray-lighter;
+$well-border: $gray-lighter;
+
+
+$nav-tabs-active-link-hover-color:          $brand-primary;
+
+$nav-pills-active-link-hover-bg:            $gray-lighter;
+$nav-pills-active-link-hover-color:         $brand-info;
+
+$input-color:                    $brand-primary;
+$input-border-focus: 						 $brand-info;
+
+$carousel-indicator-active-bg:                $brand-warning;
+$carousel-indicator-border-color:             $brand-warning;
+
+$hr-border:         rgba(#eee, .60);
+
+$progress-bg:       #ddd;
+
+$table-border-color: $gray-light;
+$table-cell-padding: $base-spacing-sm;
+$table-bg-active: $brand-primary;
+
+$grid-float-breakpoint: 992px;
+
+
+// Placeholders
+%table-view {
+  display: table;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}

@@ -1,0 +1,42 @@
+/*
+content
+  - different section views
+*/
+
+.display-table, .box-full, .box-60, .box-80 {
+	@extend %table-view;
+}
+
+.box-full {
+	@include table-view-height(100vw, 100vh);
+}
+
+.box-60 {
+	@include table-view-height(100vw, 60vh);
+}
+
+.box-80 {
+	@include table-view-height(100vw, 80vh);
+}
+
+.box-hero-1 {
+	background-image: url(../images/hero-1.svg);
+	background-position: center bottom;
+	background-size: contain;
+}
+
+.box-hero-2 {
+	background-image: linear-gradient(to bottom, rgba($brand-primary, .6) 0%, rgba($brand-primary, .6) 100%), url(../images/hero-2.jpg);
+	background-position: center center;
+}
+
+
+.table-middle {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.table-bottom {
+	display: table-cell;
+	vertical-align: bottom;
+}

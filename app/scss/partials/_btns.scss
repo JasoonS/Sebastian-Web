@@ -1,0 +1,113 @@
+/*
+  Buttons
+*/
+
+.btn {
+	border-width: $border-width;
+	letter-spacing: 1px;
+}
+.btn-shadow {
+	box-shadow: 0 12px 18px 0 rgba(black, .18);
+}
+
+.btn-xlg {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size($padding-xlarge-vertical, $padding-xlarge-horizontal, $font-size-large+4, $line-height-large, $btn-border-radius-large);
+}
+
+.btn-facebook {
+	@include button-variant($white, $facebook, $facebook);
+}
+
+.btn-twitter {
+	@include button-variant($white, $twitter, $twitter);
+}
+
+.btn-muted {
+	@include button-variant($white, $gray, $gray);
+}
+
+.btn-secondary {
+  @include button-variant($white, $brand-secondary, $brand-secondary);
+}
+
+.btn-default-o {
+	@include button-variant-o($white, transparent, $white);
+}
+
+.btn-primary-o {
+	@include button-variant-o($brand-primary, transparent, $brand-primary);
+}
+
+.btn-success-o {
+	@include button-variant-o($brand-success, transparent, $brand-success);
+}
+
+.btn-info-o {
+	@include button-variant-o($brand-info, transparent, $brand-info);
+}
+
+.btn-warning-o {
+	@include button-variant-o($brand-warning, transparent, $brand-warning);
+}
+
+.btn-danger-o {
+	@include button-variant-o($brand-danger, transparent, $brand-danger);
+}
+
+.btn-gray-o {
+	@include button-variant-o($gray, transparent, $gray);
+}
+
+.btn-gray-dark-o {
+	@include button-variant-o($gray-dark, transparent, $gray-dark);
+}
+
+.btn-facebook-o {
+	@include button-variant-o($facebook, transparent, $facebook);
+}
+
+.btn-twitter-o {
+	@include button-variant-o($twitter, transparent, $twitter);
+}
+
+.btn-social {
+	position: relative;
+	.fa {
+		position: absolute;
+		left: 12px;
+		top: 8px;
+		font-size: 24px;
+		margin: auto;
+		display: block;
+	}
+}
+
+
+.btn-tabs {
+	//position: absolute;
+	position: relative;
+	z-index: $zindex-dropdown;
+	width: 100%;
+	background: rgba($white, .84);
+
+	@media (max-width: $screen-xs-max) {
+		position: static;
+
+		.btn-xlg {
+			@include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+		}
+	}
+
+	.btn-primary {
+		color: $brand-primary;
+		background-color: transparent;
+		border-color: $brand-primary;
+		@include transition(all ease-in-out .2s);
+		&.active {
+			color: $white;
+			background-color: $brand-primary;
+			border-color: $brand-primary;
+		}
+	}
+}
