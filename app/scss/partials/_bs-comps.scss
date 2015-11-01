@@ -1,0 +1,22 @@
+// carousel
+
+.carousel-iPhone {
+	.carousel-inner {
+		position: absolute;
+		@media (min-width: $screen-xs-max) {
+			top: 57px;
+			left: 16px;
+			width: 193px;
+		}
+		@media (min-width: $screen-sm-max) {
+			top: 75px;
+			left: 21px;
+			width: 256px;
+		}
+		@media (min-width: $screen-md-max) {
+			top: 91px;
+			left: 25px;
+			width: 314px;
+		}
+	}
+}
