@@ -7,7 +7,7 @@ name: sebastian
 description: sebastiannow.com
 author:
   name: sebastian
-  email: zerothedesigner@gmail.com
+  email: christhorsvik@gmail.com
 
 # Grunt handles images and assets.
 exclude: ['images', 'styles', 'scripts', 'fonts',

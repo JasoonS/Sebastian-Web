@@ -32,3 +32,4 @@ section {
 p {
 	font-weight: $btn-font-weight;
 }
+@include scrollbars(0.5em, $brand-secondary, $brand-primary);

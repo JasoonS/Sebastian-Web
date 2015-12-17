@@ -6,8 +6,8 @@ enquire.register("screen and (min-width:481px)", function() {
 
 		$('.carousel-nav > a:nth-child(1) div').addClass('bg-muted-light');
 		$('#carousel').carousel({
-			interval: 2000
-		})
+			interval: 4000
+		});
 
 		$('.carousel-nav > a').on('click', function (event) {
 			event.preventDefault();

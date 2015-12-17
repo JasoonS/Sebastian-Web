@@ -3,15 +3,25 @@
 }
 .navbar-btn {
     &.btn-lg {
-    	margin-top: 23px;
-    	margin-bottom: 23px;
+    	margin-top: $base-spacing-sm - 1px;
+    	margin-bottom: $base-spacing-sm - 1px;
     }
 }
-
-.navbar-brand {
-  padding: $base-spacing-lg $navbar-padding-horizontal;
+.navbar-toggle {
+  margin-top: $base-spacing-sm + 2.5px;
+  margin-bottom: $base-spacing-sm + 2.5px;
 }
-
+.navbar-brand {
+  padding: $base-spacing-sm $navbar-padding-horizontal;
+  height: 72px;
+}
+.navbar {
+  min-height: 72px;
+}
+.navbar li a {
+  padding-top: 23.5px;
+  padding-bottom: 23.5px;
+}
 @media (min-width: $grid-float-breakpoint) {
 	.navbar-right {
 		li {

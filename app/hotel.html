@@ -1,0 +1,41 @@
+---
+layout: default
+title: Sebastian - Home
+---
+
+<section class="login-content mt-xxxlg">			
+	<form action="http://localhost/sebastian-admin-panel/index.php/admin/login/verify_user" method="post">
+		<a id="login-trigger" href="#">
+			<h1>Log in <span>&#x25BC;</span></h1>
+     	</a>
+		
+		<div id="login-content" style="display: none;">
+			<div class="classLoginFrmFields" id="idLoginFields">
+				<input type="text" class="form-control" placeholder="Username" id="idUsername" name="username" value="" required="" />
+			</div>
+
+			<div class="classLoginFrmFields" id="idPasswordFields">
+				<input type="password" class="form-control" id="idPassword" name="password" value="" placeholder="Password" required="" />
+			</div>
+			
+			<div>
+				<label><input type="checkbox" checked="checked"> Keep me signed in</label>
+			</div>
+
+			<div class="classLoginFrmFields">
+				<input type="submit" id="idSignIn" value="Sign In" name="sign_in" class="btn btn-dark">
+				<a class="reset_pass" href="http://localhost/sebastian-admin-panel/index.php/admin/recover">Lost your password?</a>
+			</div>
+
+			<input type="hidden" name="site" value="api">
+			
+			<div class="clearfix"></div>
+		</div>
+
+		<div class="separator">
+			<br/>
+			<div id='hotelSelectApp'></div>
+			
+		</div>
+	</form>
+</section>

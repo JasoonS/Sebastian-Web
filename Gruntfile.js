@@ -13,14 +13,73 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
   // Load all Grunt tasks
   require('load-grunt-tasks')(grunt);
+	
+
 
   grunt.initConfig({
     // Configurable paths
+    browserify: {
+      dist: {
+        options: {
+          transform: [["babelify", {presets:"react"}]],
+          browserifyOptions: { // This worked!
+          	paths:[
+                	'./node_modules',
+                	'app/react',
+                	'app/react/HotelView',
+                    'app/react/HotelList',
+                    'app/react/Router'
+                    
+                ]
+			}        
+        },
+        files: {
+          "app/scripts/bundle.js": ["app/react/app.js"]
+        }
+      }
+    },
     yeoman: {
       app: 'app',
       dist: 'dist'
     },
+     notify_hooks: {
+	    options: {
+	      enabled: true,
+	      success: true, // whether successful grunt executions should be notified automatically
+	      duration: 10 // the duration of notification in seconds, for `notify-send only
+	    }
+	  },
+	  notify: {
+	  	// browserSync: {
+	  		// options: {
+	  			// title: "The bs RELOAD has happened",
+	  			// message: "shout for joy!!"
+	  		// }
+	  	// },
+	  	browserify: {
+	  		options: {
+	  			title: "browserify complete",
+	  			message: "finished watch rebuild!"
+	  		}
+	  	},
+	    // scripts:{
+	        // options:{
+	            // title: "finished",
+	            // message: "React Is Ready!"
+	        // }
+	    // },
+	    // jekyll:{
+	        // options:{
+	            // title: "finished",
+	            // message: "All your html has been built!"
+	        // }
+	    // }
+	},
     watch: {
+      scripts: {
+        files: "app/react/*.js",
+        tasks: ["browserify"]
+      },
       sass: {
         files: ['<%= yeoman.app %>/scss/**/*.{scss,sass}'],
         tasks: ['sass:server', 'autoprefixer:dist']
@@ -41,6 +100,7 @@ module.exports = function (grunt) {
       server: {
         bsFiles: {
           src: [
+          	'app/scripts/*.js',
             '.jekyll/**/*.html',
             '.tmp/css/**/*.css',
             '{.tmp,<%= yeoman.app %>}/scripts/**/*.js',
@@ -69,6 +129,7 @@ module.exports = function (grunt) {
       test: {
         bsFiles: {
           src: [
+	        'app/scripts/*.js',
             '.jekyll/**/*.html',
             '.tmp/css/**/*.css',
             '{.tmp,<%= yeoman.app %>}/scripts/**/*.js',
@@ -88,6 +149,14 @@ module.exports = function (grunt) {
         }
       }
     },
+    // bsReload: {
+		// all: {
+                // reload: true
+       // },
+       // react: {
+       		// reload: "scripts/bundle.js"
+       // }
+    // },
     clean: {
       dist: {
         files: [{
@@ -330,6 +399,8 @@ module.exports = function (grunt) {
       ]
     }
   });
+  
+  grunt.loadNpmTasks('grunt-notify');
 
   // Define Tasks
   grunt.registerTask('serve', function (target) {
@@ -342,6 +413,8 @@ module.exports = function (grunt) {
       'concurrent:server',
       'autoprefixer:dist',
       'browserSync:server',
+      'browserify:dist',
+      'notify_hooks',
       'watch'
     ]);
   });

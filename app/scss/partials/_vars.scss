@@ -9,7 +9,7 @@ $base-spacing-md:       $base-spacing * 3;   // 6 * 3 = 18
 $base-spacing-lg:       $base-spacing * 4;   // 6 * 4 = 24
 $base-spacing-xlg:      $base-spacing * 6;   // 6 * 6 = 36
 $base-spacing-xxlg:     $base-spacing * 8;   // 6 * 8 = 48
-$base-spacing-xxxlg:    $base-spacing * 16;  // 6 * 16 = 96
+$base-spacing-xxxlg:    $base-spacing * 12;  // 6 * 12 = 72
 
 $box-model-array:   margin m-none 0, margin m-xs $base-spacing, margin m-sm $base-spacing-sm, margin m-md $base-spacing-md,
                     margin-top mt-none 0, margin-top mt-xs $base-spacing, margin-top mt-sm $base-spacing-sm, margin-top mt-md $base-spacing-md, margin-top mt-lg $base-spacing-lg, margin-top mt-xlg $base-spacing-xlg, margin-top mt-xxlg $base-spacing-xxlg, margin-top mt-xxxlg $base-spacing-xxxlg,
@@ -20,6 +20,9 @@ $box-model-array:   margin m-none 0, margin m-xs $base-spacing, margin m-sm $bas
                     padding-top pt-none 0, padding-top pt-sm $base-spacing-sm, padding-top pt-lg $base-spacing-lg, padding-top pt-xlg $base-spacing-xlg, padding-top pt-xxlg $base-spacing-xxlg, padding-top pt-xxxlg $base-spacing-xxxlg,
                     padding-bottom pb-none 0, padding-bottom pb-sm $base-spacing-sm, padding-bottom pb-lg $base-spacing-lg, padding-bottom pb-xlg $base-spacing-xlg, padding-bottom pb-xxlg $base-spacing-xxlg, padding-bottom pb-xxxlg $base-spacing-xxxlg;
 
+$color-1: #231f20;
+$color-2: #f4f4f3;
+
 $gray-darker:            #333;
 $gray-dark:              #848f98;
 $gray-base:              #aaa;
@@ -27,16 +30,32 @@ $gray:                   #C7CCCF;
 $gray-light:             #eee;
 $gray-lighter:           #f1f2f4;
 $white       :           #FFF;
+$black:                  #000;
 $facebook:               #5C75AE;
 $linkedin:               #0077B5;
 $twitter:                #55acee;
 
-$brand-primary:         #3F1875;
-$brand-secondary:       #FFC37E;
+$brand-primary:         #231f20;
+$brand-secondary:       #f4f4f3;
+$brand-hover:           #9F9F98;
 $brand-success:         #5cb85c;
 $brand-info:            #5bc0de;
 $brand-warning:         #f0ad4e;
 $brand-danger:          #d9534f;
+
+//$brand-primary:         #448ccb;
+//$brand-secondary:       #96C3EB;
+//$brand-success:         #5cb85c;
+//$brand-info:            #5bc0de;
+//$brand-warning:         #f0ad4e;
+//$brand-danger:          #d9534f;
+
+// $brand-primary:         #3F1875;
+// $brand-secondary:       #FFC37E;
+// $brand-success:         #5cb85c;
+// $brand-info:            #5bc0de;
+// $brand-warning:         #f0ad4e;
+// $brand-danger:          #d9534f;
 
 $text-muted:            $gray;
 
@@ -47,12 +66,14 @@ $border-width:          1px;
 $navbar-height:                 96px;
 $navbar-margin-bottom:          0;
 $navbar-default-link-color:     $brand-secondary;
-$navbar-default-link-hover-color:          $brand-primary;
+$navbar-default-link-hover-color:          $brand-hover;
 $nav-link-hover-bg:             rgba($white, .84);
 $nav-link-padding:              10px $base-spacing-lg;
 // $navbar-padding-vertical:       $base-spacing-lg;
-$navbar-inverse-color:          $white;
-$navbar-default-bg:             $white;
+//$navbar-inverse-color:          $white;
+//$navbar-default-bg:             $white;
+$navbar-default-bg:             $color-1;
+$navbar-inverse-color:          $color-2;
 
 $font-family-sans-serif:      "Proxima-Nova", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $line-height-base:            1.8 !default; // 20/14
